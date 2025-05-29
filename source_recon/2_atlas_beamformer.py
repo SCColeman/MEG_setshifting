@@ -248,8 +248,8 @@ for s, subject in enumerate(subjects):
     # basic preprocessing
     raw.apply_gradient_compensation(3)
     raw.pick('mag')
+    raw.filter(1,45)  
     raw.resample(250)
-    raw.filter(3,45)  
     
     # annotate segments with high movement
     threshold = 8 # mm
