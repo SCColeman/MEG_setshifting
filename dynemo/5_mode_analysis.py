@@ -815,7 +815,7 @@ fig, ax = plt.subplots(figsize=(6,4))
 correct = mode_timecourses[mode_timecourses['Correct']==1][time_cols].to_numpy()
 line_with_error(ax, correct, times, colors[0], label='Correct')
 incorrect = mode_timecourses[mode_timecourses['Correct']==0][time_cols].to_numpy()
-line_with_error(ax, slow, times, colors[1], label='Incorrect')
+line_with_error(ax, incorrect, times, colors[1], label='Incorrect')
 
 # shade significant effects
 reject, _ = mne.stats.fdr_correction(p_acc)
